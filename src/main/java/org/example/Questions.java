@@ -1,6 +1,6 @@
 package org.example;
 
-import jdk.internal.icu.lang.UCharacterDirection;
+
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -39,7 +39,7 @@ public abstract class Questions {
     public abstract String toString();
 
     void createRandomizedChoiceMap(Choice[] choiceArray) {
-        ArrayList<Choices> choicesList = new ArrayList<>();
+        ArrayList<Choice> choicesList = new ArrayList<>();
         Collections.addAll(choiceList, choiceArray);
         Collections.shuffle(choicesList);
         for (int i=0; i < choicesList.size(); i++) {
@@ -62,7 +62,7 @@ public abstract class Questions {
         try {
             int respInt = Integer.parseInt((resp));
             return respInt <= 0 || respInt > choiceMap.size();
-        } catch (NumberFormatException ) {
+        } catch (NumberFormatException o) {
             return true;
         }
     }
