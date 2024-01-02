@@ -2,6 +2,8 @@ package org.example;
 
 
 
+
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -40,7 +42,7 @@ public abstract class Questions {
 
     void createRandomizedChoiceMap(Choice[] choiceArray) {
         ArrayList<Choice> choicesList = new ArrayList<>();
-        Collections.addAll(choiceList, choiceArray);
+        Collections.addAll(choicesList, choiceArray);
         Collections.shuffle(choicesList);
         for (int i=0; i < choicesList.size(); i++) {
             choiceMap.put(i+1, choicesList.get(i));
